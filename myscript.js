@@ -11,12 +11,16 @@ var i = 1;
 //Metto in ordine alfabetico seguendo la tabella UNICODE tramire .sort
 arrayCognomi.sort();
 
-var containerList = document.getElementById("listaCognomi");
+
 
 //Finchè il numero dei cognomi non raggiunge 0 il ciclo è true
 while(numeroCognomi !== 0 ){
     //Stampo la POSIZIONE e i cognomi in ordine
     console.log("Posizione " + i + ": " + arrayCognomi[i - 1]);
+
+    var secondNameList = document.getElementById("listaCognomi");
+    //Stampa in HTML
+    secondNameList.innerHTML += "<li> Posizione " + i + ": " + arrayCognomi[i - 1] + "</li>";
 
     //Decremento il numero dei cognomi ad ogni ciclo fino ad arrivare a 0
     numeroCognomi--;
