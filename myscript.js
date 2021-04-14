@@ -2,11 +2,18 @@ var cognome = prompt("Inserisci il tuo cognome");
 
 var arrayCognomi = ["Rossi", "Verdi", "Bianchi", "Neri", "Gialli"];
 
+//Conto quanti cognomi ho all'interno dell'array
+var numeroCognomi = arrayCognomi.length;
+
+//Converte il cognome con la prima lettera maiuscola
+var primaLettera = cognome.slice(0,1).toUpperCase();
+var secondaLettera = cognome.slice(1);
+cognome = primaLettera + secondaLettera;
+console.log("Il cognome da te inserito è: " + cognome);
+
 // Inserisce il mio cognome alla fine dell'array
 arrayCognomi.push(cognome);
 
-//Conto quanti cognomi ho all'interno dell'array
-var numeroCognomi = arrayCognomi.length;
 var i = 1;
 //Metto in ordine alfabetico seguendo la tabella UNICODE tramire .sort
 arrayCognomi.sort();
